@@ -40,15 +40,15 @@ version = "0.2"
 
 [dependencies.proc-macro2]
 git = "https://github.com/sgx-test/derivative-sgx"
-version = "1"
+#version = "1"
 
 [dependencies.quote]
 git = "https://github.com/sgx-test/derivative-sgx"
-version = "1"
+#version = "1"
 
 [dependencies.syn]
 git = "https://github.com/sgx-test/derivative-sgx"
-version = "1"
+#version = "1"
 
 [badges.maintenance]
 status = "passively-maintained"
