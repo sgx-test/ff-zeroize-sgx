@@ -26,8 +26,9 @@ repository = "https://github.com/algorand/ff-zeroize"
 sgx_tstd = { rev = "v1.1.3", git = "https://github.com/apache/teaclave-sgx-sdk.git", optional = true }
 
 [dependencies.byteorder]
-#git = "https://github.com/sgx-test/digest-sgx"
-path = "../byteorder-1.4.3"
+branch = "master"
+git = "https://github.com/sgx-test/digest-sgx"
+#path = "../byteorder-1.4.3"
 version = "1"
 
 [dependencies.ff_derive-zeroize]
