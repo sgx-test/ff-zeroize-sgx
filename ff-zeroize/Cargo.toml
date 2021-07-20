@@ -34,6 +34,7 @@ version = "1"
 [dependencies.ff_derive-zeroize]
 path = "../ff_derive-zeroize"
 version = "0.6.2"
+features = ["mesalock_sgx"]
 optional = true
 
 [dependencies.rand_core]
