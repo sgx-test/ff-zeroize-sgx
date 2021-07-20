@@ -50,5 +50,9 @@ git = "https://github.com/sgx-test/derivative-sgx"
 git = "https://github.com/sgx-test/derivative-sgx"
 #version = "1"
 
+[features]
+default = []
+mesalock_sgx = ["sgx_tstd"]
+
 [badges.maintenance]
 status = "passively-maintained"
