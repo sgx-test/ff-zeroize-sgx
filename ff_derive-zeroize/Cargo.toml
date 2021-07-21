@@ -40,8 +40,8 @@ version = "0.2"
 
 [dependencies.proc-macro2]
 git = "https://github.com/sgx-test/derivative-sgx"
-features = ["mesalock_sgx"]
-#version = "1"
+#features = ["mesalock_sgx"]
+version = "1"
 
 [dependencies.quote]
 git = "https://github.com/sgx-test/derivative-sgx"
@@ -52,7 +52,7 @@ git = "https://github.com/sgx-test/derivative-sgx"
 #version = "1"
 
 [features]
-default = []
+default = ["mesalock_sgx"]
 mesalock_sgx = ["sgx_tstd"]
 
 [badges.maintenance]
