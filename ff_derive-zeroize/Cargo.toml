@@ -40,6 +40,7 @@ version = "0.2"
 
 [dependencies.proc-macro2]
 git = "https://github.com/sgx-test/derivative-sgx"
+features = ["mesalock_sgx"]
 #version = "1"
 
 [dependencies.quote]
