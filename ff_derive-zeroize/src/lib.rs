@@ -7,7 +7,7 @@
 #[cfg(all(feature = "mesalock_sgx", not(target_env = "sgx")))]
 #[macro_use]
 extern crate sgx_tstd as std;
-
+use std::prelude::v1::*;
 extern crate proc_macro;
 extern crate proc_macro2;
 extern crate syn;
