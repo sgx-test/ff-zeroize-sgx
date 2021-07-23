@@ -1,13 +1,13 @@
 #![recursion_limit = "1024"]
+#![feature(type_ascription)]
 
-
-#![cfg_attr(all(feature = "mesalock_sgx", not(target_env = "sgx")), no_std)]
-#![cfg_attr(all(target_env = "sgx", target_vendor = "mesalock"), feature(rustc_private))]
-
-#[cfg(all(feature = "mesalock_sgx", not(target_env = "sgx")))]
-#[macro_use]
-extern crate sgx_tstd as std;
-use std::prelude::v1::*;
+//#![cfg_attr(all(feature = "mesalock_sgx", not(target_env = "sgx")), no_std)]
+//#![cfg_attr(all(target_env = "sgx", target_vendor = "mesalock"), feature(rustc_private))]
+//
+//#[cfg(all(feature = "mesalock_sgx", not(target_env = "sgx")))]
+//#[macro_use]
+//extern crate sgx_tstd as std;
+//use std::prelude::v1::*;
 extern crate proc_macro;
 extern crate proc_macro2;
 extern crate syn;
@@ -322,13 +322,14 @@ fn prime_field_repr_impl(repr: &syn::Ident, limbs: usize) -> proc_macro2::TokenS
     }
 }
 
+
 /// Convert BigUint into a vector of 64-bit limbs.
 fn biguint_to_real_u64_vec(mut v: BigUint, limbs: usize) -> Vec<u64> {
     let m = BigUint::one() << 64;
     let mut ret = vec![];
 
     while v > BigUint::zero() {
-        ret.push((&v % &m).to_u64().unwrap());
+        ret.push((&v % &m : &BigUint).to_u64().unwrap());
         v = v >> 64;
     }
 

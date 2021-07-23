@@ -18,6 +18,8 @@ extern crate ff_derive_zeroize as ff_derive;
 #[cfg(feature = "derive")]
 pub use ff_derive::*;
 
+use std::prelude::v1::*;
+
 #[macro_use]
 extern crate zeroize;
 

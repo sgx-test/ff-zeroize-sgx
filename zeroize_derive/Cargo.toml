@@ -46,6 +46,7 @@ version = "1"
 [dependencies.synstructure]
 #path = "../synstructure"
 version = "0.12"
+
 [badges.maintenance]
 status = "passively-maintained"
 
