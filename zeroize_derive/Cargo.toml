@@ -25,26 +25,30 @@ repository = "https://github.com/iqlusioninc/crates/tree/main/zeroize/derive"
 [package.metadata.docs.rs]
 rustdoc-args = ["--document-private-items"]
 
-[dependencies]
-sgx_tstd = { rev = "v1.1.3", git = "https://github.com/apache/teaclave-sgx-sdk.git", optional = true }
+#[dependencies]
+#sgx_tstd = { rev = "v1.1.3", git = "https://github.com/apache/teaclave-sgx-sdk.git", optional = true }
 
 
 [lib]
 proc-macro = true
 [dependencies.proc-macro2]
-git = "https://github.com/sgx-test/derivative-sgx"
+#git = "https://github.com/sgx-test/derivative-sgx"
 version = "1"
 
 [dependencies.quote]
-git = "https://github.com/sgx-test/derivative-sgx"
+#git = "https://github.com/sgx-test/derivative-sgx"
 version = "1"
 
 [dependencies.syn]
-git = "https://github.com/sgx-test/derivative-sgx"
+#git = "https://github.com/sgx-test/derivative-sgx"
 version = "1"
 
 [dependencies.synstructure]
-path = "../synstructure"
+#path = "../synstructure"
 version = "0.12"
 [badges.maintenance]
 status = "passively-maintained"
+
+[features]
+default = []
+#mesalock_sgx = ["sgx_tstd"]

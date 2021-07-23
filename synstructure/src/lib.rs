@@ -150,12 +150,12 @@
 //! which makes use of this crate, and is fairly simple.
 
 
-#![cfg_attr(all(feature = "mesalock_sgx", not(target_env = "sgx")), no_std)]
-#![cfg_attr(all(target_env = "sgx", target_vendor = "mesalock"), feature(rustc_private))]
-
-#[cfg(all(feature = "mesalock_sgx", not(target_env = "sgx")))]
-#[macro_use]
-extern crate sgx_tstd as std;
+//#![cfg_attr(all(feature = "mesalock_sgx", not(target_env = "sgx")), no_std)]
+//#![cfg_attr(all(target_env = "sgx", target_vendor = "mesalock"), feature(rustc_private))]
+//
+//#[cfg(all(feature = "mesalock_sgx", not(target_env = "sgx")))]
+//#[macro_use]
+//extern crate sgx_tstd as std;
 
 #[cfg(all(
     not(all(target_arch = "wasm32", any(target_os = "unknown", target_os = "wasi"))),
