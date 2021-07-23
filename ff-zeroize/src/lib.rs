@@ -4,6 +4,8 @@
 #![deny(intra_doc_link_resolution_failure)]
 #![allow(unused_imports)]
 
+#![no_std]
+
 #![cfg_attr(all(feature = "mesalock_sgx", not(target_env = "sgx")), no_std)]
 #![cfg_attr(all(target_env = "sgx", target_vendor = "mesalock"), feature(rustc_private))]
 

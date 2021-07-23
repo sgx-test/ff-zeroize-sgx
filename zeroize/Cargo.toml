@@ -35,7 +35,7 @@ version = "1"
 optional = true
 
 [features]
-default = ["alloc","mesalock_sgx"]
+default = ["alloc","mesalock_sgx","zeroize_derive"]
 mesalock_sgx = ["sgx_tstd"]
 alloc = []
 #default = ["alloc"]
