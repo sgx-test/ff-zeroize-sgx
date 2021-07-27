@@ -27,8 +27,8 @@ sgx_tstd = { rev = "v1.1.3", git = "https://github.com/apache/teaclave-sgx-sdk.g
 
 [dependencies.byteorder]
 branch = "master"
-#git = "https://github.com/sgx-test/digest-sgx"
-path = "../byteorder-1.4.3"
+git = "https://github.com/sgx-test/digest-sgx"
+features = ["mesalock_sgx","std"]
 version = "1"
 
 [dependencies.ff_derive-zeroize]
@@ -47,7 +47,7 @@ version = "1.1"
 features = ["zeroize_derive"]
 
 [features]
-default = ["mesalock_sgx"]
+default = ["mesalock_sgx","derive"]
 derive = ["ff_derive-zeroize"]
 mesalock_sgx = ["sgx_tstd"]
 [badges.maintenance]
