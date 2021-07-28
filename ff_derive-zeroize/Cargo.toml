@@ -48,11 +48,11 @@ version = "1"
 
 [dependencies.quote]
 #git = "https://github.com/sgx-test/derivative-sgx"
-version = "*"
+version = "1.0.9"
 
 [dependencies.syn]
 #git = "https://github.com/sgx-test/derivative-sgx"
-version = "*"
+version = "1.0.74"
 
 #[features]
 #default = ["mesalock_sgx"]

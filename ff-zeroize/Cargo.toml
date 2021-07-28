@@ -50,5 +50,6 @@ features = ["zeroize_derive"]
 default = ["mesalock_sgx","derive"]
 derive = ["ff_derive-zeroize"]
 mesalock_sgx = ["sgx_tstd"]
+
 [badges.maintenance]
 status = "actively-developed"
